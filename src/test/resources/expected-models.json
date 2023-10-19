@@ -1,0 +1,406 @@
+{
+  "adminCart": [
+    {
+      "quantity": 4,
+      "movieId": 24428
+    },
+    {
+      "quantity": 8,
+      "movieId": 99861
+    },
+    {
+      "quantity": 1,
+      "movieId": 299534
+    },
+    {
+      "quantity": 2,
+      "movieId": 299536
+    }
+  ],
+  "employeeCart": [
+    {
+      "quantity": 8,
+      "movieId": 272
+    },
+    {
+      "quantity": 4,
+      "movieId": 40662
+    },
+    {
+      "quantity": 5,
+      "movieId": 123025
+    },
+    {
+      "quantity": 3,
+      "movieId": 142061
+    },
+    {
+      "quantity": 2,
+      "movieId": 287757
+    },
+    {
+      "quantity": 6,
+      "movieId": 414906
+    },
+    {
+      "quantity": 1,
+      "movieId": 456348
+    },
+    {
+      "quantity": 1,
+      "movieId": 472027
+    },
+    {
+      "quantity": 7,
+      "movieId": 736073
+    },
+    {
+      "quantity": 3,
+      "movieId": 736074
+    }
+  ],
+  "premiumCart": [
+    {
+      "quantity": 9,
+      "movieId": 315635
+    },
+    {
+      "quantity": 3,
+      "movieId": 429617
+    },
+    {
+      "quantity": 1,
+      "movieId": 634649
+    }
+  ],
+  "cartInsertMovieExistingCart": [
+    {
+      "quantity": 2,
+      "movieId": 19995
+    },
+    {
+      "quantity": 4,
+      "movieId": 24428
+    },
+    {
+      "quantity": 8,
+      "movieId": 99861
+    },
+    {
+      "quantity": 1,
+      "movieId": 299534
+    },
+    {
+      "quantity": 2,
+      "movieId": 299536
+    }
+  ],
+  "cartUpdateMovieQuantity": [
+    {
+      "quantity": 1,
+      "movieId": 24428
+    },
+    {
+      "quantity": 8,
+      "movieId": 99861
+    },
+    {
+      "quantity": 1,
+      "movieId": 299534
+    },
+    {
+      "quantity": 2,
+      "movieId": 299536
+    }
+  ],
+  "cartDeleteSuccess": [
+    {
+      "quantity": 8,
+      "movieId": 99861
+    },
+    {
+      "quantity": 1,
+      "movieId": 299534
+    },
+    {
+      "quantity": 2,
+      "movieId": 299536
+    }
+  ],
+  "cartRetrieveAdmin": {
+    "total": 324.25,
+    "items": [
+      {
+        "unitPrice": 19.95,
+        "quantity": 4,
+        "movieId": 24428,
+        "movieTitle": "The Avengers",
+        "backdropPath": "/nNmJRkg8wWnRmzQDe2FwKbPIsJV.jpg",
+        "posterPath": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 8,
+        "movieId": 99861,
+        "movieTitle": "Avengers: Age of Ultron",
+        "backdropPath": "/xnqust9Li4oxfhXD5kcPi3UC8i4.jpg",
+        "posterPath": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg"
+      },
+      {
+        "unitPrice": 24.95,
+        "quantity": 1,
+        "movieId": 299534,
+        "movieTitle": "Avengers: Endgame",
+        "backdropPath": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        "posterPath": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+      },
+      {
+        "unitPrice": 29.95,
+        "quantity": 2,
+        "movieId": 299536,
+        "movieTitle": "Avengers: Infinity War",
+        "backdropPath": "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+        "posterPath": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+      }
+    ]
+  },
+  "cartRetrieveEmployee": {
+    "total": 798.00,
+    "items": [
+      {
+        "unitPrice": 29.95,
+        "quantity": 8,
+        "movieId": 272,
+        "movieTitle": "Batman Begins",
+        "backdropPath": "/hQrHN6WXERVw6XUMpfCgLfvrh5V.jpg",
+        "posterPath": "/8RW2runSEc34IwKN2D1aPcJd2UL.jpg"
+      },
+      {
+        "unitPrice": 9.95,
+        "quantity": 4,
+        "movieId": 40662,
+        "movieTitle": "Batman: Under the Red Hood",
+        "backdropPath": "/3xnfbtgJmVotajqM57iKib3ftnT.jpg",
+        "posterPath": "/dEujs48u3n4cmh15ITtHHDFxSaS.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 5,
+        "movieId": 123025,
+        "movieTitle": "Batman: The Dark Knight Returns, Part 1",
+        "backdropPath": "/1YaG52CwGY3pKh76OBlwX0ymncg.jpg",
+        "posterPath": "/kkjTbwV1Xnj8wBL52PjOcXzTbnb.jpg"
+      },
+      {
+        "unitPrice": 9.95,
+        "quantity": 3,
+        "movieId": 142061,
+        "movieTitle": "Batman: The Dark Knight Returns, Part 2",
+        "backdropPath": "/9Eh5xzWTpJeZM1FGCblWKZ8GTpw.jpg",
+        "posterPath": "/arEZYd6uMOFTILne9Ux0A8qctMe.jpg"
+      },
+      {
+        "unitPrice": 9.95,
+        "quantity": 2,
+        "movieId": 287757,
+        "movieTitle": "Scooby-Doo Meets Batman",
+        "backdropPath": "/rHJ2Bk3aXvgvh2nLRmgUMC2nDeA.jpg",
+        "posterPath": "/uI9enNoQsqseLXQK60YbscDr5L6.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 6,
+        "movieId": 414906,
+        "movieTitle": "The Batman",
+        "backdropPath": "/tRS6jvPM9qPrrnx2KRp3ew96Yot.jpg",
+        "posterPath": "/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+      },
+      {
+        "unitPrice": 24.95,
+        "quantity": 1,
+        "movieId": 456348,
+        "movieTitle": "Batman & Bill",
+        "backdropPath": "/u82RurwuuaHlnv0SWEpSSK8T7a8.jpg",
+        "posterPath": "/gc1oyq0K8TdtFTXmYV03v536HsI.jpg"
+      },
+      {
+        "unitPrice": 24.95,
+        "quantity": 1,
+        "movieId": 472027,
+        "movieTitle": "Batman: The Dark Knight Returns",
+        "backdropPath": "/bUQGT4xJib43OrnpmNzgrGaLWJM.jpg",
+        "posterPath": "/9uydeANO6PLpD6Irh7qLizaEMjk.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 7,
+        "movieId": 736073,
+        "movieTitle": "Batman: The Long Halloween, Part One",
+        "backdropPath": "/uS9apevOgs2fuYghf9szOoK1u63.jpg",
+        "posterPath": "/sR7gppb0YGjwLvE6Vnj6wYv5MnW.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 3,
+        "movieId": 736074,
+        "movieTitle": "Batman: The Long Halloween, Part Two",
+        "backdropPath": "/j14Z0pP7tpuHZlVBSuUL7tq2SGb.jpg",
+        "posterPath": "/5X1n5q08mZ7NpNpxehMFODxfNYq.jpg"
+      }
+    ]
+  },
+  "cartRetrievePremium": {
+    "total": 236.60,
+    "items": [
+      {
+        "unitPrice": 17.95,
+        "quantity": 9,
+        "movieId": 315635,
+        "movieTitle": "Spider-Man: Homecoming",
+        "backdropPath": "/tTlAA0REGPXSZPBfWyTW9ipIv1I.jpg",
+        "posterPath": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg"
+      },
+      {
+        "unitPrice": 17.95,
+        "quantity": 3,
+        "movieId": 429617,
+        "movieTitle": "Spider-Man: Far From Home",
+        "backdropPath": "/vamhMTvh9m9zFHDoR0v1nRtf6T4.jpg",
+        "posterPath": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg"
+      },
+      {
+        "unitPrice": 21.20,
+        "quantity": 1,
+        "movieId": 634649,
+        "movieTitle": "Spider-Man: No Way Home",
+        "backdropPath": "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+        "posterPath": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+      }
+    ]
+  },
+  "orderComplete": {
+    "total": 269.15,
+    "saleItems": [
+      {
+        "quantity": 4,
+        "movieId": 24428
+      },
+      {
+        "quantity": 8,
+        "movieId": 99861
+      },
+      {
+        "quantity": 1,
+        "movieId": 299534
+      },
+      {
+        "quantity": 2,
+        "movieId": 299536
+      }
+    ]
+  },
+  "orderListFoundAdmin": [
+    {
+      "saleId": 9,
+      "total": 159.60,
+      "orderDate": "2022-01-09T12:00:00Z"
+    },
+    {
+      "saleId": 8,
+      "total": 105.45,
+      "orderDate": "2022-01-08T12:00:00Z"
+    },
+    {
+      "saleId": 7,
+      "total": 139.65,
+      "orderDate": "2022-01-07T12:00:00Z"
+    },
+    {
+      "saleId": 6,
+      "total": 119.70,
+      "orderDate": "2022-01-06T12:00:00Z"
+    },
+    {
+      "saleId": 5,
+      "total": 99.75,
+      "orderDate": "2022-01-05T12:00:00Z"
+    }
+  ],
+  "orderListFoundEmployee": [
+    {
+      "saleId": 2,
+      "total": 119.70,
+      "orderDate": "2022-01-02T12:00:00Z"
+    },
+    {
+      "saleId": 1,
+      "total": 69.70,
+      "orderDate": "2022-01-01T12:00:00Z"
+    }
+  ],
+  "orderListFoundPremium": [
+    {
+      "saleId": 3,
+      "total": 377.55,
+      "orderDate": "2022-01-03T12:00:00Z"
+    }
+  ],
+  "orderDetailEmployee": {
+    "total": 119.70,
+    "items": [
+      {
+        "unitPrice": 19.95,
+        "quantity": 1,
+        "movieId": 1893,
+        "movieTitle": "Star Wars: Episode I - The Phantom Menace",
+        "backdropPath": "/5fu7fzy4NZTsL1Jap00UBIInAuB.jpg",
+        "posterPath": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 2,
+        "movieId": 1894,
+        "movieTitle": "Star Wars: Episode II - Attack of the Clones",
+        "backdropPath": "/1uQSh7P3k0oRbRf0vH8GVt4thpP.jpg",
+        "posterPath": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg"
+      },
+      {
+        "unitPrice": 19.95,
+        "quantity": 3,
+        "movieId": 1895,
+        "movieTitle": "Star Wars: Episode III - Revenge of the Sith",
+        "backdropPath": "/eFaRU5y8wIwV0D14DPkbLaRUzOV.jpg",
+        "posterPath": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg"
+      }
+    ]
+  },
+  "orderDetailPremium": {
+    "total": 377.55,
+    "items": [
+      {
+        "unitPrice": 21.20,
+        "quantity": 7,
+        "movieId": 140607,
+        "movieTitle": "Star Wars: The Force Awakens",
+        "backdropPath": "/k6EOrckWFuz7I4z4wiRwz8zsj4H.jpg",
+        "posterPath": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg"
+      },
+      {
+        "unitPrice": 8.45,
+        "quantity": 8,
+        "movieId": 181808,
+        "movieTitle": "Star Wars: The Last Jedi",
+        "backdropPath": "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
+        "posterPath": "/ySaaKHOLAQU5HoZqWmzDIj1VvZ1.jpg"
+      },
+      {
+        "unitPrice": 17.95,
+        "quantity": 9,
+        "movieId": 181812,
+        "movieTitle": "Star Wars: The Rise of Skywalker",
+        "backdropPath": "/SPkEiZGxq5aHWQ2Zw7AITwSEo2.jpg",
+        "posterPath": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg"
+      }
+    ]
+  }
+}
