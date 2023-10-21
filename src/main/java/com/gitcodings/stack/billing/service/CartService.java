@@ -1,11 +1,17 @@
 package com.gitcodings.stack.billing.service;
 
+import com.gitcodings.stack.billing.model.data.CartItem;
+import com.gitcodings.stack.billing.model.response.CartItemsResponse;
 import com.gitcodings.stack.billing.model.response.CartResponse;
 import com.gitcodings.stack.billing.repo.BillingRepo;
 import com.gitcodings.stack.core.error.ResultError;
 import com.gitcodings.stack.core.result.BillingResults;
 import com.gitcodings.stack.core.result.Result;
+import com.stripe.model.terminal.Reader;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class CartService {
@@ -79,5 +85,33 @@ public class CartService {
             result = BillingResults.CART_ITEM_DELETED;
         }
         return result;
+    }
+
+    public CartItemsResponse retrieveItemResponse(Long userId, boolean isPremium) {
+        CartItemsResponse response = new CartItemsResponse();
+        List<CartItem> items = repo.getItems(userId, isPremium);
+
+        if (items == null || items.size() == 0 )
+            response.setResult(BillingResults.CART_EMPTY);
+        else {
+            response.setResult(BillingResults.CART_RETRIEVED);
+            response.setItems(items);
+            response.setTotal(calcTotal(items));
+        }
+        return response;
+    }
+
+    private BigDecimal calcTotal(List<CartItem> items) {
+        BigDecimal total = BigDecimal.ZERO; // Initialize the total to zero
+
+        for (CartItem item : items) {
+            // Calculate the subtotal for each item (unitPrice * quantity)
+            BigDecimal itemTotal = item.getUnitPrice().multiply(BigDecimal.valueOf(item.getQuantity()));
+
+            // Add the item subtotal to the total
+            total = total.add(itemTotal);
+        }
+
+        return total;
     }
 }

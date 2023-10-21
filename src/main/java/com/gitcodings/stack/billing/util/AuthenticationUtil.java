@@ -1,10 +1,14 @@
 package com.gitcodings.stack.billing.util;
 
+import com.gitcodings.stack.core.error.ResultError;
+import com.gitcodings.stack.core.result.IDMResults;
+import com.gitcodings.stack.core.security.JWTManager;
 import com.nimbusds.jwt.SignedJWT;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
+import java.util.List;
 
 @Service
 public class AuthenticationUtil {
@@ -21,6 +25,18 @@ public class AuthenticationUtil {
             e.printStackTrace();
         }
         return userId;
+    }
+
+    public boolean isPremium(SignedJWT user) {
+        List<String> roles = null;
+        try {
+            roles = user.getJWTClaimsSet().getStringListClaim(JWTManager.CLAIM_ROLES);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+        // return true if contains premium role
+        return roles.stream().anyMatch("PREMIUM"::equalsIgnoreCase);
     }
 
 }
