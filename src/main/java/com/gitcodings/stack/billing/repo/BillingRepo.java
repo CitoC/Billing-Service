@@ -50,4 +50,15 @@ public class BillingRepo
 
         jdbcTemplate.update(sql, params);
     }
+
+    public void updateItem(Long movieId, Integer quantity, Long userId) {
+        String sql = "UPDATE billing.cart SET quantity = :quantity WHERE movie_id = :movieId AND user_id = :userId";
+
+        MapSqlParameterSource params = new MapSqlParameterSource();
+        params.addValue("quantity", quantity);
+        params.addValue("movieId", movieId);
+        params.addValue("userId", userId);
+
+        jdbcTemplate.update(sql, params);
+    }
 }

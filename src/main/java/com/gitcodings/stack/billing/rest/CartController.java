@@ -33,27 +33,14 @@ public class CartController
         return ResponseEntity.status(response.getResult().status()).body(response);
     }
 
-//    @GetMapping("/movie/search")
-//    public ResponseEntity<MovieResponse> movieSearch(@AuthenticationPrincipal SignedJWT user,
-//                                                     MovieRequest request) throws ParseException
-//    {
-//        // check the roles of user
-//        List<String> roles = user.getJWTClaimsSet().getStringListClaim(JWTManager.CLAIM_ROLES);
-//        boolean canSeeHidden =  roles.contains("ADMIN") || roles.contains("EMPLOYEE");
-//
-//        List<Movie> movies = movieService.searchMovies(request, canSeeHidden);
-//
-//        MovieResponse response = new MovieResponse();
-//        if (movies == null || movies.isEmpty()) {
-//            response.setResult(MoviesResults.NO_MOVIES_FOUND_WITHIN_SEARCH);
-//        } else {
-//            response.setResult(MoviesResults.MOVIES_FOUND_WITHIN_SEARCH)
-//                    .setMovies(movies);
-//        }
-//
-//        return ResponseEntity.status(response.getResult().status())
-//                .body(response);
-//    }
+    @PostMapping("/cart/update")
+    public ResponseEntity<CartResponse> updateItem(@AuthenticationPrincipal SignedJWT user, @RequestBody CartRequest request) {
+        Long userId = AuthUtil.getUserId(user);
+        CartResponse response = service.updateItemResponse(request.getMovieId(), request.getQuantity(), userId);
+        return ResponseEntity.status(response.getResult().status()).body(response);
+    }
+
+
 
     @GetMapping("/test")
     public String test() {
