@@ -7,6 +7,7 @@ import com.gitcodings.stack.billing.service.CartService;
 import com.gitcodings.stack.billing.util.AuthenticationUtil;
 import com.gitcodings.stack.core.result.Result;
 import com.nimbusds.jwt.SignedJWT;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -54,6 +55,13 @@ public class CartController
         Long userId = AuthUtil.getUserId(user);
         boolean isPremium = AuthUtil.isPremium(user);
         CartItemsResponse response = service.retrieveItemResponse(userId, isPremium);
+        return ResponseEntity.status(response.getResult().status()).body(response);
+    }
+
+    @PostMapping("/cart/clear")
+    public ResponseEntity<CartResponse> clearItems(@AuthenticationPrincipal SignedJWT user) {
+        Long userId = AuthUtil.getUserId(user);
+        CartResponse response = service.clearItemResponse(userId);
         return ResponseEntity.status(response.getResult().status()).body(response);
     }
     @GetMapping("/test")

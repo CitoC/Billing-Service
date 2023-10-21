@@ -114,4 +114,18 @@ public class CartService {
 
         return total;
     }
+
+    public CartResponse clearItemResponse(Long userId) {
+        CartResponse response = new CartResponse();
+        int rowAffected = 0;
+        rowAffected = repo.clearItems(userId);
+
+        if (rowAffected == 0) {
+            response.setResult(BillingResults.CART_EMPTY);
+        }
+        else {
+            response.setResult(BillingResults.CART_CLEARED);
+        }
+        return response;
+    }
 }

@@ -115,4 +115,13 @@ public class BillingRepo
             return rs.getBigDecimal("unit_price").setScale(2, RoundingMode.DOWN);
         }
     }
+
+    public int clearItems(Long userId) {
+        String sql = "DELETE FROM billing.cart WHERE user_id = :userId";
+
+        MapSqlParameterSource params = new MapSqlParameterSource();
+        params.addValue("userId", userId);
+
+        return jdbcTemplate.update(sql, params);
+    }
 }
