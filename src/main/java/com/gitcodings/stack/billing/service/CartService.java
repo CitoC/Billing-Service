@@ -1,5 +1,6 @@
 package com.gitcodings.stack.billing.service;
 
+import com.gitcodings.stack.billing.model.response.CartResponse;
 import com.gitcodings.stack.billing.repo.BillingRepo;
 import com.gitcodings.stack.core.result.BillingResults;
 import com.gitcodings.stack.core.result.Result;
@@ -13,8 +14,12 @@ public class CartService {
         this.repo = repo;
     }
 
-    //
-    public Result insertItem(Long movieId, Integer quantity, Long userId) {
+    public CartResponse insertItemResponse(Long movieId, Integer quantity, Long userId) {
+        Result result = insertItemResult(movieId, quantity, userId);
+        return new CartResponse().setResult(result);
+    }
+
+    private Result insertItemResult(Long movieId, Integer quantity, Long userId) {
         Result result;
         if (quantity <= 0) {
             result = BillingResults.INVALID_QUANTITY;

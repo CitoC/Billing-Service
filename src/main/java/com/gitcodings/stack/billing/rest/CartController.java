@@ -1,6 +1,7 @@
 package com.gitcodings.stack.billing.rest;
 
 import com.gitcodings.stack.billing.model.request.CartRequest;
+import com.gitcodings.stack.billing.model.response.CartResponse;
 import com.gitcodings.stack.billing.service.CartService;
 import com.gitcodings.stack.billing.util.AuthenticationUtil;
 import com.gitcodings.stack.core.result.Result;
@@ -26,10 +27,10 @@ public class CartController
     }
 
     @PostMapping("/cart/insert")
-    public ResponseEntity<Result> insertItem(@AuthenticationPrincipal SignedJWT user, @RequestBody CartRequest request) {
+    public ResponseEntity<CartResponse> insertItem(@AuthenticationPrincipal SignedJWT user, @RequestBody CartRequest request) {
         Long userId = AuthUtil.getUserId(user);
-        Result result = service.insertItem(request.getMovieId(), request.getQuantity(), userId);
-        return ResponseEntity.status(result.status()).body(result);
+        CartResponse response = service.insertItemResponse(request.getMovieId(), request.getQuantity(), userId);
+        return ResponseEntity.status(response.getResult().status()).body(response);
     }
 
 //    @GetMapping("/movie/search")
