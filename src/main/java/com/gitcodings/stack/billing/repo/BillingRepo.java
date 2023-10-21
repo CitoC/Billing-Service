@@ -61,4 +61,14 @@ public class BillingRepo
 
         jdbcTemplate.update(sql, params);
     }
+
+    public void deleteItem(Long movieId, Long userId) {
+        String sql = "DELETE FROM billing.cart WHERE movie_id = :movieId AND user_id = :userId";
+
+        MapSqlParameterSource params = new MapSqlParameterSource();
+        params.addValue("movieId", movieId);
+        params.addValue("userId", userId);
+
+        jdbcTemplate.update(sql, params);
+    }
 }

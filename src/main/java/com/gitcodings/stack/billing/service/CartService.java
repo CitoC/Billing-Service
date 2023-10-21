@@ -62,4 +62,22 @@ public class CartService {
         }
         return result;
     }
+
+    public CartResponse deleteItemResponse(Long movieId, Long userId) {
+        Result result = deleteItemResult(movieId, userId);
+        return new CartResponse().setResult(result);
+    }
+
+    private Result deleteItemResult(Long movieId, Long userId) {
+        Result result;
+
+        if (!repo.itemExists(movieId, userId)) {
+            result = BillingResults.CART_ITEM_DOES_NOT_EXIST;
+        }
+        else {
+            repo.deleteItem(movieId, userId);
+            result = BillingResults.CART_ITEM_DELETED;
+        }
+        return result;
+    }
 }

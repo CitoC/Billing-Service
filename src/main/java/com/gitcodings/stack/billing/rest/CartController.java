@@ -40,6 +40,12 @@ public class CartController
         return ResponseEntity.status(response.getResult().status()).body(response);
     }
 
+    @DeleteMapping("/cart/delete/{movieId}")
+    public ResponseEntity<CartResponse> deleteItem(@AuthenticationPrincipal SignedJWT user, @PathVariable Long movieId) {
+        Long userId = AuthUtil.getUserId(user);
+        CartResponse response = service.deleteItemResponse(movieId, userId);
+        return ResponseEntity.status(response.getResult().status()).body(response);
+    }
 
 
     @GetMapping("/test")
